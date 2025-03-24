@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProject.Pages.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             Title="ProfilePage"
+             BackgroundImageSource="https://img.freepik.com/free-vector/pastel-gradient-1_78370-256.jpg">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center">
+        <Border HeightRequest="700"
+                WidthRequest="1200"
+                BackgroundColor="#C4FFFFFF"
+                StrokeShape="RoundRectangle 12"
+                Stroke="Black"
+                StrokeThickness="1">
+            <VerticalStackLayout>
+                <VerticalStackLayout VerticalOptions="Start"
+                                     Padding="20">
+                    <Border WidthRequest="200"
+                            HeightRequest="200"
+                            StrokeShape="RoundRectangle 100"
+                            Stroke="Black"
+                            StrokeThickness="1">
+                        <Border.Shadow>
+                            <Shadow Brush="Black"
+                                    Opacity="1"
+                                    Offset="1,5"
+                                    Radius="5"/>
+                        </Border.Shadow>
+                        <Image Source="profile.jpg"></Image>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Border WidthRequest="100"
+                            HeightRequest="30"
+                            Stroke="Black"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 10"
+                            Margin="20">
+                        <VerticalStackLayout VerticalOptions="Center"
+                                             HorizontalOptions="Center">
+                            <Label>Profile</Label>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+                <VerticalStackLayout Padding="0,20,0,0">
+                    <Border WidthRequest="1000"
+                            HeightRequest="300"
+                            Stroke="Black"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 12">
+                        <VerticalStackLayout VerticalOptions="Start"
+                                             Padding="10">
+                            <HorizontalStackLayout HorizontalOptions="Center">
+                                <Border WidthRequest="300"
+                                        HeightRequest="40"
+                                        Stroke="Black"
+                                        StrokeThickness="1"
+                                        Margin="20"
+                                        StrokeShape="RoundRectangle 10">
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                        <Label>ชื่อ: นาย อัษฎาวุธ ตระการจันทร์</Label>
+                                    </HorizontalStackLayout>
+                                </Border>
+                                <Border WidthRequest="300"
+                                        HeightRequest="40"
+                                        Stroke="Black"
+                                        StrokeThickness="1"
+                                        Margin="20"
+                                        StrokeShape="RoundRectangle 10">
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                        <Label>รหัสนิสิต: 65011212151</Label>
+                                    </HorizontalStackLayout>
+                                </Border>
+                                <Border WidthRequest="100"
+                                        HeightRequest="40"
+                                        Stroke="Black"
+                                        StrokeThickness="1"
+                                        Margin="20"
+                                        StrokeShape="RoundRectangle 10">
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                        <Label>ชั้นปี: 3</Label>
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout HorizontalOptions="Center">
+                                <Border WidthRequest="300"
+                                        HeightRequest="40"
+                                        Stroke="Black"
+                                        StrokeThickness="1"
+                                        Margin="20"
+                                        StrokeShape="RoundRectangle 10">
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                        <Label>คณะ: วิทยาการสารสนเทศ</Label>
+                                    </HorizontalStackLayout>
+                                </Border>
+                                <Border WidthRequest="300"
+                                        HeightRequest="40"
+                                        Stroke="Black"
+                                        StrokeThickness="1"
+                                        Margin="20"
+                                        StrokeShape="RoundRectangle 10">
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                        <Label>สาขา: วิทยาการคอมพิวเตอร์</Label>
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout HorizontalOptions="Center">
+                                <Border WidthRequest="300"
+                                        HeightRequest="40"
+                                        Stroke="Black"
+                                        StrokeThickness="1"
+                                        Margin="20"
+                                        StrokeShape="RoundRectangle 10">
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                        <Label>มหาวิทยาลัยมหาสารคาม</Label>
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

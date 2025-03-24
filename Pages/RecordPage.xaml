@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProject.Pages.RecordPage"
+             xmlns:viewmodel="clr-namespace:MauiProject.ViewModel"
+             x:DataType="viewmodel:RecordViewModel"
+             Shell.NavBarIsVisible="False"
+             Title="RecordPage"
+             BackgroundImageSource="https://wallpapers.com/images/featured/pink-and-blue-background-w5ky1wdjcn6nd5la.jpg">
+
+    <!-- Main Content -->
+    <ScrollView Padding="20">
+        <Border BackgroundColor="#C4FFFFFF"
+                Stroke="Black"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20">
+            <VerticalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <HorizontalStackLayout VerticalOptions="Start">
+                        <Border BackgroundColor="White"
+                                Margin="30"
+                                Padding="20"
+                                StrokeShape="RoundRectangle 20,20,20,20"
+                                WidthRequest="400"
+                                Stroke="Black"
+                                StrokeThickness="1">
+
+                            <VerticalStackLayout HorizontalOptions="Start">
+                                <Label Text="ค้นหารายวิชา"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       Margin="0,0,0,5"/>
+                                <HorizontalStackLayout VerticalOptions="Center"
+                                                       Spacing="5"
+                                                       HorizontalOptions="Center">
+                                    <Entry Placeholder="กรอกรายวิชาที่สนใจ"
+                                           AutomationId="UsernameEntry"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           BackgroundColor="White"
+                                           WidthRequest="250"
+                                           TextColor="Black"
+                                           Text="{Binding SearchText, Mode=TwoWay}">
+                                    </Entry>
+                                    <Button Text="ค้นหา"
+                                            WidthRequest="100"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                            TextColor="Black"
+                                            BackgroundColor="White"
+                                            BorderWidth="3"
+                                            Command="{Binding SearchCommand}"/>
+                                </HorizontalStackLayout>
+
+                                <!-- <Border Stroke="White"
+                                    StrokeThickness="3"
+                                    StrokeShape="RoundRectangle 20,20,20,20"
+                                    BackgroundColor="White"
+                                    WidthRequest="300"
+                                    Margin="0,20,0,10">
+                                <Label Margin="10"
+                                       TextColor="#3572EF"
+                                       FontAttributes="Bold"
+                                       Text="1204307 - ปัญญาประดิษฐ์"
+                                       x:DataType="x:String"></Label>
+                            </Border> -->
+                                <ListView ItemsSource="{Binding SearchResults}"
+                                          SelectedItem="{Binding SelectedSubject, Mode=TwoWay}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Border Stroke="Black"
+                                                        StrokeThickness="1"
+                                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                                        BackgroundColor="White"
+                                                        WidthRequest="300"
+                                                        Margin="0,20,0,0">
+                                                    <Label Margin="10"
+                                                           TextColor="Black"
+                                                           FontAttributes="None"
+                                                           Text="{Binding .}"
+                                                           x:DataType="x:String"/>
+                                                </Border>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+
+                                <Border Stroke="White"
+                                        StrokeThickness="3"
+                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                        BackgroundColor="#FF2A91FF"
+                                        WidthRequest="150"
+                                        Margin="0,20,0,10">
+                                    <Button Text="ลงทะเบียนเรียน"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Transparent"
+                                            BorderWidth="0"
+                                            Command="{Binding RegisterCommand}"/>
+                                </Border>
+                            </VerticalStackLayout>
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout VerticalOptions="Start">
+                        <Border BackgroundColor="White"
+                                Margin="20"
+                                Padding="20"
+                                StrokeShape="RoundRectangle 20,20,20,20"
+                                WidthRequest="400"
+                                Stroke="Black"
+                                StrokeThickness="1">
+                            <VerticalStackLayout>
+                                <Border Stroke="Black"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                        BackgroundColor="White"
+                                        WidthRequest="300"
+                                        Padding="5"
+                                        Margin="0,0,0,10">
+                                    <Label
+                                        Text="รายวิชาทั้งหมด"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                </Border>
+                                <ListView ItemsSource="{Binding ListAllSubject}" HeightRequest="600">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Border Stroke="Black"
+                                                        StrokeThickness="1"
+                                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                                        BackgroundColor="White"
+                                                        WidthRequest="300"
+                                                        Margin="0,0,0,10">
+                                                    <Label Margin="10"
+                                                           TextColor="Black"
+                                                           FontAttributes="None"
+                                                           Text="{Binding .}"
+                                                           x:DataType="x:String"></Label>
+                                                </Border>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </VerticalStackLayout>
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout VerticalOptions="Start">
+                        <Border BackgroundColor="White"
+                                Margin="20"
+                                Padding="20"
+                                StrokeShape="RoundRectangle 20,20,20,20"
+                                WidthRequest="400"
+                                Stroke="Black"
+                                StrokeThickness="1">
+                            <VerticalStackLayout>
+                                <Border Stroke="Black"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                        BackgroundColor="White"
+                                        WidthRequest="300"
+                                        Padding="5"
+                                        Margin="0,0,0,10">
+                                    <Label
+                                        Text="รายวิชาในเทอมปัจจุบัน"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                </Border>
+                                <ListView ItemsSource="{Binding ListData}" HeightRequest="600"
+                                          ItemSelected="OnSelected">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Border Stroke="Black"
+                                                        StrokeThickness="1"
+                                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                                        BackgroundColor="White"
+                                                        WidthRequest="300"
+                                                        Margin="0,0,0,10">
+                                                    <Label Margin="10"
+                                                           TextColor="Black"
+                                                           FontAttributes="None"
+                                                           Text="{Binding .}"
+                                                           x:DataType="x:String"></Label>
+                                                </Border>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </VerticalStackLayout>
+                        </Border>
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+</ContentPage>
