@@ -11,7 +11,7 @@ public partial class HomeViewModel : ObservableObject
     [ObservableProperty]
     List<String> listDataTerm1 =
         [
-            "1204405 - วิทยาศาสตร์ข้อมูล",
+        "1204405 - วิทยาศาสตร์ข้อมูล",
         "1204407 - การเรียนรู้ของเครื่อง",
         "1204430 - คอมพิวเตอร์วิสัยทัศน์และการประมวลผลภาพ",
         "1204429 - การพัฒนาโปรแกรมประยุกต์",

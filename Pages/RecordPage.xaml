@@ -6,7 +6,7 @@
              x:DataType="viewmodel:RecordViewModel"
              Shell.NavBarIsVisible="False"
              Title="RecordPage"
-             BackgroundImageSource="https://wallpapers.com/images/featured/pink-and-blue-background-w5ky1wdjcn6nd5la.jpg">
+             BackgroundImageSource="bg4.jpg">
 
     <!-- Main Content -->
     <ScrollView Padding="20">
@@ -26,14 +26,25 @@
                                 StrokeThickness="1">
 
                             <VerticalStackLayout HorizontalOptions="Start">
-                                <Label Text="ค้นหารายวิชา"
-                                       TextColor="Black"
-                                       FontAttributes="Bold"
-                                       FontSize="16"
-                                       Margin="0,0,0,5"/>
+                                <Border Stroke="Black"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 20,20,20,20"
+                                        BackgroundColor="White"
+                                        WidthRequest="300"
+                                        Padding="5"
+                                        Margin="0,0,0,10">
+                                    <Label
+                                        Text="ค้นหารายวิชา"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                </Border>
                                 <HorizontalStackLayout VerticalOptions="Center"
                                                        Spacing="5"
-                                                       HorizontalOptions="Center">
+                                                       HorizontalOptions="Center"
+                                                       Padding="0,10">
                                     <Entry Placeholder="กรอกรายวิชาที่สนใจ"
                                            AutomationId="UsernameEntry"
                                            FontSize="16"
@@ -52,19 +63,6 @@
                                             BorderWidth="3"
                                             Command="{Binding SearchCommand}"/>
                                 </HorizontalStackLayout>
-
-                                <!-- <Border Stroke="White"
-                                    StrokeThickness="3"
-                                    StrokeShape="RoundRectangle 20,20,20,20"
-                                    BackgroundColor="White"
-                                    WidthRequest="300"
-                                    Margin="0,20,0,10">
-                                <Label Margin="10"
-                                       TextColor="#3572EF"
-                                       FontAttributes="Bold"
-                                       Text="1204307 - ปัญญาประดิษฐ์"
-                                       x:DataType="x:String"></Label>
-                            </Border> -->
                                 <ListView ItemsSource="{Binding SearchResults}"
                                           SelectedItem="{Binding SelectedSubject, Mode=TwoWay}">
                                     <ListView.ItemTemplate>
@@ -128,7 +126,8 @@
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"/>
                                 </Border>
-                                <ListView ItemsSource="{Binding ListAllSubject}" HeightRequest="600">
+                                <ListView ItemsSource="{Binding ListAllSubject}"
+                                        HeightRequest="600">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <ViewCell>
@@ -176,7 +175,8 @@
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"/>
                                 </Border>
-                                <ListView ItemsSource="{Binding ListData}" HeightRequest="600"
+                                <ListView ItemsSource="{Binding ListData}"
+                                        HeightRequest="600"
                                           ItemSelected="OnSelected">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>

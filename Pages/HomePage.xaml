@@ -6,7 +6,7 @@
              x:DataType="viewmodel:HomeViewModel"
              Shell.NavBarIsVisible="False"
              Title="HomePage"
-             BackgroundImageSource="https://cdn.vectorstock.com/i/500p/66/77/colorful-watercolor-background-of-abstract-sunset-vector-54316677.jpg">
+             BackgroundImageSource="bg3.jpg">
 
        <Grid ColumnDefinitions="Auto, *, Auto"
              RowDefinitions="Auto, *"

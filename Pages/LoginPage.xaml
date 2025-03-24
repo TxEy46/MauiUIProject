@@ -7,7 +7,7 @@
 
        <Grid>
               <!-- Background image with some blur effect -->
-              <Image Source="https://img.freepik.com/premium-photo/blurred-colorful-wallpaper-background_976742-179.jpg"
+              <Image Source="bg1.avif"
                      Aspect="AspectFill"
                      Opacity="0.6"/>
 

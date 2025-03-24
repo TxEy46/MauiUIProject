@@ -4,7 +4,7 @@
              x:Class="MauiProject.Pages.ProfilePage"
              Shell.NavBarIsVisible="False"
              Title="ProfilePage"
-             BackgroundImageSource="https://img.freepik.com/free-vector/pastel-gradient-1_78370-256.jpg">
+             BackgroundImageSource="bg5.avif">
 
     <VerticalStackLayout VerticalOptions="Center"
                          HorizontalOptions="Center">

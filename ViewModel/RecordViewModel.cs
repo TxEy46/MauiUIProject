@@ -1,13 +1,16 @@
-namespace MauiProject.ViewModel;
 using System;
 using System.Collections.ObjectModel; // เพิ่ม namespace นี้
 using System.Linq;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using MauiProject.Pages;
+
+namespace MauiProject.ViewModel;
+
 public partial class RecordViewModel : ObservableObject
 {
-[ObservableProperty]
+    [ObservableProperty]
     private ObservableCollection<string> listData = new ObservableCollection<string>
     {
         "1204305 - คอมพิวเตอร์กราฟิก",
@@ -50,8 +53,8 @@ public partial class RecordViewModel : ObservableObject
         SearchResults = ListAllSubject
             .Where(subject => subject.Contains(SearchText))
             .ToList();
-    } 
-    
+    }
+
     [RelayCommand]
     private async Task Register()
     {

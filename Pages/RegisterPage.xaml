@@ -7,7 +7,7 @@
 
        <Grid>
               <!-- Background image with some blur effect -->
-              <Image Source="https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8203.jpg"
+              <Image Source="bg2.avif"
                      Aspect="AspectFill"
                      Opacity="0.6"/>
 
@@ -23,7 +23,7 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Image on the left side -->
-                            <Image Source="https://w0.peakpx.com/wallpaper/1020/225/HD-wallpaper-blue-nature.jpg"
+                            <Image Source="bluenature.jpg"
                                    Aspect="Fill"
                                    HeightRequest="720"
                                    Grid.Column="0"/>
